@@ -1,0 +1,12 @@
+* 编译
+阅读 _doc/building.md_
+由于系统存在 ccache， ~bash configuration~ 报错
+	#+BEGIN_SRC sh
+          $ bash configuration
+          .....
+          configure: Please use --enable-ccache instead of providing a wrapped compiler.
+          configure: error: /usr/lib64/ccache/gcc is a symbolic link to ccache. This is not supported.
+          configure exiting with result code 1
+	#+END_SRC
+
+将 _/usr/lib64/ccache_ 从 ~PATH~ 中去除就好
